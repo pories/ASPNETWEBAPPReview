@@ -11,7 +11,7 @@ namespace ASPWEBAPPReview1
     {
         protected void Page_Load(object sender, EventArgs e)
         {
-
+            compairsonLabel1.Text = "equal to";
         }
 
         protected void Button1_Click(object sender, EventArgs e)
@@ -91,6 +91,14 @@ namespace ASPWEBAPPReview1
         {
             resultLabel3.Text = (ifelseTextBox1.Text == ifelseTextBox2.Text) ? "Equal" : "false";
 
+        }
+
+        protected void Button3_Click(object sender, EventArgs e)
+        {
+            resultLabel4.Text = (comparisonTextBox1.Text == comparisonTextBox2.Text) ? "Is" : "Isn't";
+            //then he put in ++, !=, <,>,<=,>=, ||, &&
+            resultLabel4.Text = (CheckBox1.Checked) ? "Checked" : "Unchecked";
+            //Then put in !checkbox1.checked to see if unchecked.
         }
     }
 }

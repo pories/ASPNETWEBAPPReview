@@ -109,7 +109,30 @@
 &nbsp;&nbsp;&nbsp;
         <br />
         <br />
+        --------------------------------------------------------------------------------<br />
+        Now he added info on the page load event box. He added compairsonLabel1.text = &quot;equal to&quot;;<br />
+        Then he put in a set of boxes just like above but now it is below.<br />
+        Then he listed the following comparison and logical operators: ==, !=,&lt;,&gt;, &lt;=,&gt;=. Might be others, but who got time for that.
         <br />
+        <br />
+&nbsp;&nbsp;&nbsp; One:
+        <asp:TextBox ID="comparisonTextBox1" runat="server"></asp:TextBox>
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="compairsonLabel1" runat="server"></asp:Label>
+&nbsp;&nbsp; Two:
+        <asp:TextBox ID="comparisonTextBox2" runat="server"></asp:TextBox>
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button3" runat="server" OnClick="Button3_Click" Text="Ok" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:CheckBox ID="CheckBox1" runat="server" Text="Check Box" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="resultLabel4" runat="server"></asp:Label>
         <br />
         <br />
         <br />
