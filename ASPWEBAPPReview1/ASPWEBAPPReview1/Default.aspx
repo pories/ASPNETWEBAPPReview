@@ -91,7 +91,7 @@
         <br />
 &nbsp;&nbsp;&nbsp; Two boxes, and a result with a tern operator.
         <br />
-&nbsp;&nbsp;&nbsp; is: result = (box1==box2) ? &quot;answer 1&quot;: &quot;answer 2&quot;; anything in () is evaluated. In this case it is a bool.<br />
+&nbsp;&nbsp;&nbsp; is: result = (box1==box2) ? &quot;answer 1&quot;: &quot;answer 2&quot;; anything in () is evaluated. strings and numbers.<br />
 &nbsp;&nbsp;&nbsp; Type in two things, and see if they are equal.<br />
 &nbsp;&nbsp;&nbsp;&nbsp; One:&nbsp;
         <asp:TextBox ID="ifelseTextBox1" runat="server"></asp:TextBox>
