@@ -183,6 +183,33 @@
         <asp:Label ID="resultLabel6" runat="server"></asp:Label>
         <br />
         ---------------------------------------------------------------------------------<br />
+&nbsp;&nbsp;&nbsp; page load and page.ispostback<br />
+&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp; asp.net specific. Page_load and pageispostback.
+        <br />
+&nbsp;&nbsp;&nbsp; IF you use page load event you can initilze values in server controls. You can initilize programitacly the values of server controlers.<br />
+&nbsp;&nbsp;&nbsp; FYI: Calandar only works at midnight. so code would be datetime.now.date.adddays(2);<br />
+&nbsp;&nbsp;&nbsp; Page load works before ok click event, and will reset values to initilized values. Then if you get those values the are the page load values.
+        <br />
+&nbsp;&nbsp;&nbsp; Take a look at pagelife cycle msdn page.
+        <br />
+&nbsp;&nbsp;&nbsp; pageispostback is how we determening if page is being loaded. Gets a value if page is being rendered for the first time, or is loaded in response
+        <br />
+&nbsp;&nbsp;&nbsp; to a post back.
+        <br />
+&nbsp;&nbsp;&nbsp; in page load<br />
+&nbsp;&nbsp;&nbsp; if(!page.ispostback)<br />
+&nbsp;&nbsp;&nbsp; {//execute this code. mytextbox.text = &quot;some value&quot;; //or<br />
+        <br />
+&nbsp;&nbsp;&nbsp; myvalandar.selectdate = datetime.now.date.adddays(2);}<br />
+&nbsp;&nbsp;&nbsp; The above code means that if page is being rendered for the first time, do this code, otherwise do code as it is in server controlls.<br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        ---------------------------------------------------------------------------------<br />
         <br />
 &nbsp;&nbsp;&nbsp; Here is a hyper link: <a href="http://www.microsoft.com">Microsoft</a> I put the name in, then I clicked on hyperlink button on top tool bar.
         <br />
