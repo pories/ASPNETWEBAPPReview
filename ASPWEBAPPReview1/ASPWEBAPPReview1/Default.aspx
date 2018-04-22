@@ -135,7 +135,19 @@
         <asp:Label ID="resultLabel4" runat="server"></asp:Label>
         <br />
         <br />
+        --------------------------------------------------------------------------------<br />
         <br />
+&nbsp;&nbsp;&nbsp; Datetime data type. This is a complex data type. The way it is handled at run time.<br />
+&nbsp;&nbsp;&nbsp; How to set a new varable to this date time, how to set to any moment, and how to +/- times, and retrieve specific parts of times.<br />
+        <br />
+&nbsp;&nbsp;&nbsp; Working with date time:<br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button4" runat="server" OnClick="Button4_Click" Text="Ok" />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="resultLabel5" runat="server"></asp:Label>
         <br />
         <br />
         <br />

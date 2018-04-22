@@ -100,5 +100,35 @@ namespace ASPWEBAPPReview1
             resultLabel4.Text = (CheckBox1.Checked) ? "Checked" : "Unchecked";
             //Then put in !checkbox1.checked to see if unchecked.
         }
+
+        protected void Button4_Click(object sender, EventArgs e)
+        {
+            //create a new date time varable.
+            DateTime myvale = DateTime.Now;
+            //resultLabel5.Text = myvale.ToString(); //this will show mm/dd/yyyy HH:MM:SS am/pm
+            //There are a ton of different ways to show date time. 
+            //resultLabel5.Text = myvale.to //just type in .to and you will see all the ones you can convert to. To local is common. 
+            //resultLabel5.Text = myvale.ToLongDateString(); //date written out with words.
+            //resultLabel5.Text = myvale.ToLongTimeString(); //just time.
+            //resultLabel5.Text = myvale.ToShortDateString(); //just short date in numbers
+            //resultLabel5.Text = myvale.ToShortTimeString(); //short time, no seconds
+            //You can also add time.
+            //resultLabel5.Text = myvale.AddDays(2).ToString(); //add days, and chained helper method together.
+            //resultLabel5.Text = myvale.AddDays(-2).ToString(); //subtract 2 days.
+            //resultLabel5.Text = myvale.Month.ToString(); //will show this months number.
+            //resultLabel5.Text = myvale.IsDaylightSavingTime().ToString(); //Tells you if you are in daylight savings time.
+            //resultLabel5.Text = myvale.DayOfWeek.ToString(); //tells you what day of the week it is.
+            //What if we need a varable initilzed to a special date. 
+            //DateTime myday = DateTime.Parse("6/6/69");
+            //resultLabel5.Text = myday.ToLongDateString();
+            //Second primary way to initilze date time. Different way to do above. 
+            //Don't forget most people use UTC then local. 
+            DateTime myday = new DateTime(1969, 6, 6);
+            resultLabel5.Text = myday.ToLongDateString();
+
+
+
+
+        }
     }
 }
