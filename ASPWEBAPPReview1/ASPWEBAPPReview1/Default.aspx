@@ -150,6 +150,37 @@
         <asp:Label ID="resultLabel5" runat="server"></asp:Label>
         <br />
         <br />
+        ---------------------------------------------------------------------------------<br />
+&nbsp;&nbsp;&nbsp; Time to work with the calandare server control. You can maniplute it alot of ways in the properties window.<br />
+&nbsp;&nbsp;&nbsp; If you look at auto format in arrow on side of calandar. You can change calandar style.
+        <br />
+&nbsp;&nbsp;&nbsp; You can change SelectionMode to day week. Then if you hit selected week you can see new code.
+        <br />
+&nbsp;&nbsp;&nbsp; You can do date range, and make it a collection.
+        <br />
+&nbsp;&nbsp;&nbsp; A selection of a date will trigger a postback to server. We can handle when a selection is made and we can display that day that is selected in the result label.
+        <br />
+&nbsp;&nbsp;&nbsp; Select clandar and change selectionmode back to day. Goto lightning bolt and that will allow you to get to events. Goto selection changed event and double click in it and it
+        <br />
+&nbsp;&nbsp;&nbsp; will fill up with myCalendar1_SelectionChanged.and that will put that in the server.
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Calendar ID="myCalendar1" runat="server" Height="236px" OnSelectionChanged="myCalendar1_SelectionChanged" Width="442px"></asp:Calendar>
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="getDateButton" runat="server" OnClick="getDateButton_Click" Text="Get Date" />
+        <asp:Button ID="setDateButton" runat="server" OnClick="setDateButton_Click" Text="Set Date" />
+        <asp:Button ID="showDateButton" runat="server" OnClick="showDateButton_Click" Text="Show Date" />
+        <asp:Button ID="selectedWeekButton" runat="server" OnClick="selectedWeekButton_Click" Text="Selected Week" />
+        <br />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="resultLabel6" runat="server"></asp:Label>
         <br />
         ---------------------------------------------------------------------------------<br />
         <br />

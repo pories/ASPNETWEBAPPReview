@@ -103,8 +103,8 @@ namespace ASPWEBAPPReview1
 
         protected void Button4_Click(object sender, EventArgs e)
         {
-            //create a new date time varable.
-            DateTime myvale = DateTime.Now;
+            //create a new date time varable. This represents one moment in time. 
+            //DateTime myvale = DateTime.Now;
             //resultLabel5.Text = myvale.ToString(); //this will show mm/dd/yyyy HH:MM:SS am/pm
             //There are a ton of different ways to show date time. 
             //resultLabel5.Text = myvale.to //just type in .to and you will see all the ones you can convert to. To local is common. 
@@ -123,12 +123,47 @@ namespace ASPWEBAPPReview1
             //resultLabel5.Text = myday.ToLongDateString();
             //Second primary way to initilze date time. Different way to do above. 
             //Don't forget most people use UTC then local. 
-            DateTime myday = new DateTime(1969, 6, 6);
-            resultLabel5.Text = myday.ToLongDateString();
+            //DateTime myday = new DateTime(1969, 6, 6);
+            //resultLabel5.Text = myday.ToLongDateString();
 
+            //hold down control button and click on link below and it will open page up in vs. 
+            //https://msdn.microsoft.com/en-us/library/se73z7b9(v=vs.110).aspx
+            //look into remarks and you can see how it is formatted. 
+            //days.hours:minutes:seconds:miliseconds
+            //The timespan object represents the amount of time between two date times. 
+            //a timespan object.
+            TimeSpan mytimespan = TimeSpan.Parse("1.2:3:30.5");
+            DateTime myvale2 = DateTime.Parse("6/6/1969");
+            TimeSpan myage = DateTime.Now.Subtract(myvale2);
+            //now we have a timespan value of my age.
+            //resultLabel5.Text = myage.Hours.ToString(); //number of hours from start of day.
+            resultLabel5.Text = myage.TotalDays.ToString(); //you can do lots of things, add, subtract, total or lots of others.
+            //This will produce a date time and a time span. Meaning a specific time, or a time period.
+        }
 
+        protected void getDateButton_Click(object sender, EventArgs e)
+        {
+            resultLabel6.Text = myCalendar1.SelectedDate.ToShortDateString();
+        }
 
+        protected void setDateButton_Click(object sender, EventArgs e)
+        {
+            myCalendar1.SelectedDate = DateTime.Parse("4/22/2018"); //get todays date.
+        }
 
+        protected void showDateButton_Click(object sender, EventArgs e)
+        {
+            myCalendar1.VisibleDate = DateTime.Parse("6/6/1996");
+        }
+
+        protected void selectedWeekButton_Click(object sender, EventArgs e)
+        {
+            resultLabel6.Text = "Week of " + myCalendar1.SelectedDate.ToShortDateString();
+        }
+
+        protected void myCalendar1_SelectionChanged(object sender, EventArgs e)
+        {
+            resultLabel6.Text = myCalendar1.SelectedDate.ToShortDateString();
         }
     }
 }
