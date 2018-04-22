@@ -42,7 +42,7 @@
         <br />
         &lt;pages maintainscrollpositiononpostback=&quot;true&quot;/&gt;<br />
         <br />
-        To make radio buttons stay together, put them in the same group.<br />
+        To make radio buttons stay together, put them in the same group name in properties. Otherwise they will be treated as individuals.<br />
 &nbsp;&nbsp;&nbsp;
         <asp:RadioButton ID="RadioButton1" runat="server" Text="One" />
         <br />
@@ -83,6 +83,23 @@
         <asp:Label ID="resultLabel2" runat="server"></asp:Label>
         <br />
         <br />
+        <br />
+        ---------------------------------------------------------------------------------<br />
+        <br />
+&nbsp;&nbsp;&nbsp; Here is a hyper link: <a href="http://www.microsoft.com">Microsoft</a> I put the name in, then I clicked on hyperlink button on top tool bar.
+        <br />
+&nbsp;&nbsp;&nbsp; Here is another hyperlink, but I used the server controll.<br />
+&nbsp;&nbsp;&nbsp;
+        <asp:HyperLink ID="microsoft" runat="server" NavigateUrl="http://www.microsoft.com" Target="_blank" ToolTip="This is a tool tip.">Textinproperties</asp:HyperLink>
+        <br />
+        ---------------------------------------------------------------------------------<br />
+&nbsp;&nbsp;&nbsp; Now here is an image:
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Image ID="Image1" runat="server" ImageUrl="~/Art/dGv92Ni.jpg" />
+        <br />
+&nbsp;&nbsp;&nbsp;
         <br />
         <br />
         <br />
