@@ -86,5 +86,11 @@ namespace ASPWEBAPPReview1
             string mymathresult = myresult.ToString();
             resultLabel2.Text = mymathresult;
         }
+
+        protected void Button2_Click(object sender, EventArgs e)
+        {
+            resultLabel3.Text = (ifelseTextBox1.Text == ifelseTextBox2.Text) ? "Equal" : "false";
+
+        }
     }
 }

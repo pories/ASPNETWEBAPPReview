@@ -15,7 +15,9 @@
         When compiled together it comes together to default.aspx.<br />
         When intelisense is active, just click next key like . (member access) and it will auto fill.
         <br />
-        &nbsp;&nbsp;&nbsp; ASP.Net Server Controlls.       &nbsp;&nbsp;&nbsp; <strong>Text Box: </strong>Take input and enters it into the system.&nbsp;&nbsp;&nbsp;
+        &nbsp;&nbsp;&nbsp; ASP.Net Server Controlls.       &nbsp;&nbsp;&nbsp; <strong>
+        <br />
+&nbsp;&nbsp;&nbsp; Text Box: </strong>Take input and enters it into the system.&nbsp;&nbsp;&nbsp;
         <br />
         &nbsp;&nbsp; <strong>&nbsp;Button: </strong>Creates a click event.
         <br />
@@ -81,6 +83,36 @@
         <br />
 &nbsp;&nbsp;&nbsp;
         <asp:Label ID="resultLabel2" runat="server"></asp:Label>
+        <br />
+        <br />
+        ---------------------------------------------------------------------------------<br />
+        <br />
+&nbsp;&nbsp;&nbsp; If, else if, else exists, and so does tern operator.
+        <br />
+&nbsp;&nbsp;&nbsp; Two boxes, and a result with a tern operator.
+        <br />
+&nbsp;&nbsp;&nbsp; is: result = (box1==box2) ? &quot;answer 1&quot;: &quot;answer 2&quot;; anything in () is evaluated. In this case it is a bool.<br />
+&nbsp;&nbsp;&nbsp; Type in two things, and see if they are equal.<br />
+&nbsp;&nbsp;&nbsp;&nbsp; One:&nbsp;
+        <asp:TextBox ID="ifelseTextBox1" runat="server"></asp:TextBox>
+&nbsp; Two:
+        <asp:TextBox ID="ifelseTextBox2" runat="server"></asp:TextBox>
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Button ID="Button2" runat="server" OnClick="Button2_Click" Text="Ok" />
+        <br />
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <asp:Label ID="resultLabel3" runat="server"></asp:Label>
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
+        <br />
         <br />
         <br />
         <br />
