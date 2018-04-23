@@ -204,8 +204,74 @@
         <br />
 &nbsp;&nbsp;&nbsp; myvalandar.selectdate = datetime.now.date.adddays(2);}<br />
 &nbsp;&nbsp;&nbsp; The above code means that if page is being rendered for the first time, do this code, otherwise do code as it is in server controlls.<br />
+        -------------------------------------------------------------------------------------------------------------------------------------<br />
+&nbsp;&nbsp;&nbsp; viewstate:
+        <br />
+&nbsp;&nbsp;&nbsp; In page load. if(!page.ispostback) //Page is rendered for first time.<br />
+&nbsp;&nbsp;&nbsp; {viewstate.add(&quot;myvar1&quot;, &quot;mike&quot;)}//put in key myvar1 and value mike for key value pair.<br />
+&nbsp;&nbsp;&nbsp; Then in ok button:
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp; string myvar2 = viewstate[&quot;myvar1&quot;].tostrting(); //This will call the value and then give the dictionary value for it.
+        <br />
+&nbsp;&nbsp;&nbsp;&nbsp; resultlabel.text = myvar2;<br />
+&nbsp;&nbsp;&nbsp; This will show mike when you hit button.
         <br />
         <br />
+&nbsp;&nbsp;&nbsp; Then you can input your own.
+        <br />
+&nbsp;&nbsp;&nbsp; In page load. if(!page.ispostback) //Page is rendered for first time.<br />
+&nbsp;&nbsp;&nbsp; {viewstate.add(&quot;myvar1&quot;, &quot;&quot;)}//put in key myvar1 and value is empty for value.<br />
+&nbsp;&nbsp;&nbsp; Then in ok button it will take current value and add whatever you typed.
+        <br />
+&nbsp;&nbsp;&nbsp; string myvar2 = viewstate[&quot;myvar1&quot;].tostrting();<br />
+&nbsp;&nbsp;&nbsp; value += valuetextbox.text + &quot; &quot;; //Whatever input you put in text box plus space is value.
+        <br />
+&nbsp;&nbsp;&nbsp; viewstate[&quot;myvar1&quot;] = value;&nbsp; //Then set viewstate to that new value.
+        <br />
+&nbsp;&nbsp;&nbsp; resultlabel.text = myvar2; //Will show what is in&nbsp; value.
+        <br />
+&nbsp;&nbsp;&nbsp; valuetextbox.text = &quot;&quot;;//Then clear out text box so user can enter anther value.
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <br />
+        --------------------------------------------------------------------------------------------------------------------------------<br />
+&nbsp; String.format is what is used to put stings in correct format to maipluate.
+        <br />
+&nbsp;&nbsp;&nbsp; resultlabel.text = string.format(&quot;Hello world&quot; + {0:C}, moneytext.box)&nbsp; Standard C# formatting works. Can put in html line break &lt;br/&gt;<br />
+&nbsp;&nbsp;&nbsp; Want a line break, do it this way, but will only work for web applications, not windows forms applicaitons, or console window appliations. Only<br />
+&nbsp;&nbsp;&nbsp; works cause this is html.<br />
+&nbsp;&nbsp;&nbsp; {0:000-00-0000} //ss number<br />
+&nbsp;&nbsp;&nbsp; {1:(000) 000-0000} //ptn number<br />
+&nbsp;&nbsp;&nbsp; Goto msn custom date and time formats, and will let you pick apart date, and reassemble.&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp; {2:d, m, yy} //date but not as default.<br />
+&nbsp; ----------------------------------------------------------------------------------------------------------------------------------&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp; //Create a set of input boxes and then a buttton. Then you can make an array.
+        <br />
+&nbsp;&nbsp;&nbsp; string[] myarray1 = new string[4(#ofboxes)];<br />
+&nbsp;&nbsp;&nbsp; myarray1[0] =&nbsp; textbox1.text;<br />
+&nbsp;&nbsp;&nbsp; myarray1[1] =&nbsp; textbox2.text;<br />
+&nbsp;&nbsp;&nbsp; myarray1[2] =&nbsp; textbox3.text;<br />
+&nbsp;&nbsp;&nbsp; myarray1[3] =&nbsp; textbox4.text;<br />
+&nbsp;&nbsp;&nbsp; resultlabel.text = myarray1[0]; //value in 0<br />
+&nbsp;&nbsp;&nbsp; resultlabel.text = myarray.length.tostring();//how long an array is.<br />
+&nbsp;&nbsp;&nbsp; string[] myarray2 = {&quot;mike&quot;, &quot;dave&quot;, &quot;paul&quot;};<br />
+&nbsp;&nbsp;&nbsp; viewstate.add(&quot;myvalues1&quot;, myarray2);<br />
+&nbsp;&nbsp;&nbsp; resultlabel.text = &quot;Values added....&quot;;<br />
+        <br />
+&nbsp;&nbsp;&nbsp; Then you can have another button to retrieve the values out.
+        <br />
+&nbsp;&nbsp;&nbsp;
+        <br />
+&nbsp;&nbsp;&nbsp; string[] myarray2 = (string[])viewstate[&quot;myvalues1&quot;];<br />
+&nbsp;&nbsp;&nbsp; textbo1.text = values[0];<br />
+&nbsp;&nbsp;&nbsp; textbo2.text = values[1];<br />
+&nbsp;&nbsp;&nbsp; textbo3.text = values[2];<br />
+&nbsp;&nbsp;&nbsp; textbo4.text = values[3];<br />
+&nbsp;&nbsp;&nbsp;&nbsp; resultlabel.text = &quot;Values retrieved....&quot;; //then put out values from viewbag.
         <br />
         <br />
         <br />
